@@ -16,8 +16,8 @@ modules:
   - id: integer-overflow
     icon: Ninetales
 
-  - id: other-vulnerabilities
-    icon: Paras
-  
   - id: use-after-free
     icon: Diglett
+
+  - id: other-vulnerabilities
+    icon: Paras
