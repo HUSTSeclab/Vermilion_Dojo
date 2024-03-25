@@ -37,18 +37,30 @@ void input_message(char * name)
 	puts("Say something to me:");
 	scanf("%256s*c", buf);
 	printf("Copy that, %s\n", buf);
-	print_exit();
+	puts("Bye bye~");
+}
+
+void read_input()
+{
+	char name[0x20];
+	
+	puts("Give me your name:");
+	read(0, name, 0x20);
+        input_message(name);
+}
+
+void play()
+{
+	read_input();
 }
 
 int main()
 {
-	char name[0x20];
+	init();
         
 	print_desc();
 
-	puts("Give me your name:");
-	read(0, name, 0x20);
-        input_message(name);
+	play();
 
 	print_exit();
 

@@ -25,22 +25,30 @@ void read_flag()
 	}
 
 	fclose(file);
+	exit(0);
 }
 
-int main()
+void read_input()
 {
 	short a = 0x1234;
 	long unused_int = 0xdeadbeef;
 	char buffer[0x13];
-        
+
+	puts("Give me your input");
+	scanf("%s", buffer);
+}
+
+void play()
+{
+	read_input();
+}
+
+int main()
+{
         init();
 
 	print_desc();
-
-        puts("Give me your input");
-	
-	scanf("%s", buffer); // vulnerable scanf
-        
+	play();
 	print_exit();
 
 	return 0;

@@ -29,6 +29,7 @@ void read_flag()
 	}
 
 	fclose(file);
+	exit(0);
 }
 
 void input_message(char * data)
@@ -43,8 +44,6 @@ void input_message(char * data)
 
 	MD5(text, sizeof(text), hash);
 	
-	print_exit();
-
 	if (strncmp((const char *)hash, 
 	            "\x7c\xcc\x02\xc4\x02\x19\xc5\xc6\x52\x2a\x37\x74\x99\xa9\x60\xec",
 	             MD5_DIGEST_LENGTH) == 0)
