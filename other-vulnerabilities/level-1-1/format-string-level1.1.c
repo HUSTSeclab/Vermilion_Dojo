@@ -31,6 +31,7 @@ void read_flag()
 	printf("%s", flag);
 
 	fclose(fp);
+	exit(0);
 }
 
 int fmt_func(){
