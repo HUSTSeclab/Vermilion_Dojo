@@ -25,20 +25,28 @@ void read_flag()
 	}
 
 	fclose(file);
+	exit(0);
+}
+
+void round1()
+{
+	char buffer[0x10];
+
+	puts("Give me your input");
+	scanf("%s", buffer);
+}
+
+void play()
+{
+	round1();
 }
 
 int main()
 {
-	char buffer[0x10];
-        
         init();
 
 	print_desc();
-
-        puts("Give me your input");
-	
-	scanf("%s", buffer); // vulnerable scanf
-        
+        play();
 	print_exit();
 
 	return 0;

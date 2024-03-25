@@ -17,7 +17,7 @@ void read_flag()
 
 	file = fopen("/flag", "r");
 	if (file == NULL) {
-		printf("[-] cannot open\n");
+		printf("[-] cannot open flag\n");
 		exit(-1);
 	}
 
@@ -39,13 +39,14 @@ int main()
 
         puts("Give me your input");
 	
-	scanf("%s", buffer); // vulnerable scanf
+	scanf("%s", buffer);
         
         if (magic == 0xdeadbeef) {
                 read_flag();
         }
-
-	print_exit();
+	else {
+		print_exit();
+	}
 
 	return 0;
 }

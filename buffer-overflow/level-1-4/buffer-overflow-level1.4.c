@@ -38,18 +38,15 @@ int main()
 	print_desc();
 
 	printf("3 + 5 = ?\n");
-	scanf("%s", buffer); // vulnerable scanf
+	scanf("%s", buffer);
 	result = atoi(buffer);
 
 	if (match) {
 		read_flag();
 	} else {
 		printf("The provided input is incorrect\n");
+		print_exit();
 	}
-
-	return 0;
-
-	print_exit();
 
 	return 0;
 }

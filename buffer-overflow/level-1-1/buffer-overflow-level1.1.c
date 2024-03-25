@@ -30,6 +30,8 @@ void read_flag()
 	}
 
 	fclose(file);
+
+	exit(0);
 }
 
 int main()
@@ -43,7 +45,7 @@ int main()
 
         puts("Give me your input");
 	
-	scanf("%s", buffer); // vulnerable scanf
+	scanf("%s", buffer);
         
         fp();
 

@@ -43,10 +43,13 @@ int main()
 
         puts("Give me your input");
 	
-	scanf("%s", buffer); // vulnerable scanf
+	scanf("%s", buffer);
         
         read_flag(filename);
 
+	if (strcmp(filename, "Makefile") != 0)
+		return 1;
+	
 	print_exit();
 
 	return 0;
