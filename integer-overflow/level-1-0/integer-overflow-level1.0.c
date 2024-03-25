@@ -52,10 +52,10 @@ int main()
 
 	if ((i >= 80) && (s != i))
 		print_flag();
-	else
+	else {
 	 	printf("Please leverage the underlying integer overflow to bypass the condition\n");
-
-	print_exit();
+		print_exit();
+	}
 	
 	return 0;
 }

@@ -34,6 +34,7 @@ void print_flag()
 	printf("%s", flag);
 
 	fclose(fp);
+	exit(0);
 }
 
 int main()

@@ -32,6 +32,7 @@ void read_flag()
 	printf("%s", flag);
 
 	fclose(fp);
+	exit(0);
 }
 
 void vuln_func(unsigned short index)
@@ -62,9 +63,8 @@ int main()
 		vuln_func(i);
 	} else {
 	 	printf("Please leverage the underlying integer overflow to bypass the condition\n");
+		print_exit();
 	}
-
-	print_exit();
 
 	return 0;
 }
